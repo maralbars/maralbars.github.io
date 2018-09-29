@@ -24,6 +24,7 @@
 			$(document).on('click', '#start-game', function(){
 				shadows.on_revert();
 				game[next_step].init(target);
+				$(game.cut.selector).show();
 				shadows.off_revert(function(){
 					$(game[next_step].selector).show();
 					$('section.intro').removeClass('active');
@@ -40,6 +41,8 @@
 				// Пошел за кофе
 				$(document).on('click', '.coffee, .want-coffee, .standart-pass, .banya, .whos, .danu', function(){
 					shadows.on_revert();
+					$('.cut-scene .win').hide();
+					$('.cut-scene .lose').show();
 					setTimeout(cut_scene.level.one.fail, 1500);
 				});
 				// Нажал открыть
@@ -90,7 +93,20 @@
 					}, 1200);
 				});
 
+				$(document).on('click', '.save-pass', function(){
+					shadows.on_revert();
+					$('.cut-scene .win').show();
+					$('.cut-scene .lose').hide();
+					setTimeout(cut_scene.level.one.fail, 1500);
+				});
+
 			}
+		},
+		cut: {
+			init: function(){
+
+			},
+			selector: ''
 		},
 		level2: {
 			init: function(){
