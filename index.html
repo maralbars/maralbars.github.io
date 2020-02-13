@@ -1,92 +1,154 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<title>Document</title>
 
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
 
-	<title>CheckSec</title>
-	<meta name="description" content="">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="">
-	<link rel="icon" href="">
-	<link rel="apple-touch-icon" sizes="180x180" href="">
-	<!-- Template Basic Images End -->
-	
-	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
-
-	<link rel="stylesheet" href="css/main.min.css">
-
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
-
 <body>
+	
 
-	<!-- Custom HTML -->
 
-	<section class="intro">
-		<img src="img/logo.png" class="logo" alt="">
-		<button class="start-game" id="start-game">Рискнуть</button>
-	</section>
+	<div class="container">
+		<div class="row">
 
-	<section class="shadows"></section>
-	<div class="sound mute"><img src="img/speaker.svg" alt="sound on/off"></div>
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Опт.</th>
+						<th scope="col">Товар</th>
+						<th scope="col">Вес</th>
+						<th scope="col">Цена</th>
+						<th scope="col">Сумма</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck1">
+								<label class="custom-control-label" for="customCheck1"></label>
+							</div>
+						</td>
+						<td>
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="Начните вбивать товар" aria-label="Начните вбивать товар" aria-describedby="button-addon2">
+								<div class="input-group-append">
+									<button class="btn btn-outline-secondary" type="button" id="button-addon2">Выбрать</button>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="form-group">
+								<input type="number" class="form-control" step="0.01" aria-describedby="emailHelp">
+							</div>
+						</td>
+						<td>
+							<div class="form-group">
+								<input type="number" class="form-control" step="1" aria-describedby="emailHelp" value="500">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck1">
+								<label class="custom-control-label" for="customCheck1"></label>
+							</div>
+						</td>
+						<td>
+							<select class="form-control form-control-lg">
+								<option value="">товар - 1</option>
+								<option value="">товар - 2</option>
+								<option value="">товар - 3</option>
+								<option value="">товар - 4</option>
+								<option value="">товар - 5</option>
+								<option value="">товар - 6</option>
+								<option value="">товар - 7</option>
+								<option value="">товар - 8</option>
+								<option value="">товар - 9</option>
+								<option value="">товар - 10</option>
+								<option value="">товар - 11</option>
+								<option value="">товар - 12</option>
+								<option value="">товар - 13</option>
+								<option value="">товар - 14</option>
+								<option value="">товар - 15</option>
+								<option value="">товар - 16</option>
+								<option value="">товар - 17</option>
+								<option value="">товар - 18</option>
+								<option value="">товар - 19</option>
+								<option value="">товар - 20</option>
+								<option value="">товар - 21</option>
+								<option value="">товар - 22</option>
+								<option value="">товар - 23</option>
+								<option value="">товар - 24</option>
+								<option value="">товар - 25</option>
+								<option value="">товар - 26</option>
+								<option value="">товар - 27</option>
+								<option value="">товар - 28</option>
+								<option value="">товар - 29</option>
+								<option value="">товар - 30</option>
+								<option value="">товар - 31</option>
+								<option value="">товар - 32</option>
+								<option value="">товар - 33</option>
+								<option value="">товар - 34</option>
+								<option value="">товар - 35</option>
+								<option value="">товар - 36</option>
+								<option value="">товар - 37</option>
+								<option value="">товар - 38</option>
+								<option value="">товар - 39</option>
+								<option value="">товар - 40</option>
 
-	<section class="level-1">
-		<div class="container">
-			<div class="game-zone">
-				<img src="img/pass/button coffee ready.png" class="actions coffee shover" alt="">
-				<div class="closed-laptop">
-					<button class="shover">Открыть</button>
-					<img src="img/wall/laptop closed.png" class="actions shover" alt="">
-				</div>
-				<div class="laptop-open">
-					<img src="img/wall/laptop open.png" class="laptop" alt="">
-					<img src="img/all/monitor/settings icon.png" class="settings shover" alt="">
-					<img src="img/all/monitor/folder foto.png" class="folder shover" alt="">
-					<img src="img/all/actions/button Iwant coffee.png" class="want-coffee actions shover" alt="">
-					<div class="password">
-						<img src="img/pass.png" class="password" alt="">
-						<input type="password" name="password">
-						<button class="cancel-pass actions shover">Отменить</button>
-						<button class="save-pass actions shover" disabled>Сохранить</button>
-						<div class="pass-close shover"></div>
-						<img src="img/pass/button bubble 1.png" class="standart-pass actions shover one" alt="">
-						<img src="img/pass/button bubble 2.png" class="standart-pass actions shover two" alt="">
-						<img src="img/pass/button bubble 3.png" class="standart-pass actions shover three" alt="">
-						<img src="img/banya.png" class="banya actions shover" alt="">
-					</div>
-					<div class="folder-opened">
-						<img src="img/folder.png" class="folder-op" alt="">
-						<img src="img/photos.png" class="photos actions shover" alt="">
-						<div class="folder-close shover"></div>
-					</div>
-					<img src="img/who.png" alt="" class="whos actions shover">
-					<img src="img/get-coffee.png" class="danu actions shover">
-				</div>
-				<!-- <p class="description">Вы сидите в кафе и ждете кофе...</p> -->
+								<option value="">товар - 20</option>
+								<option value="">товар - 21</option>
+								<option value="">товар - 22</option>
+								<option value="">товар - 23</option>
+								<option value="">товар - 24</option>
+								<option value="">товар - 25</option>
+								<option value="">товар - 26</option>
+								<option value="">товар - 27</option>
+								<option value="">товар - 28</option>
+								<option value="">товар - 29</option>
+								<option value="">товар - 30</option>
+								<option value="">товар - 31</option>
+								<option value="">товар - 32</option>
+								<option value="">товар - 33</option>
+								<option value="">товар - 34</option>
+								<option value="">товар - 35</option>
+								<option value="">товар - 36</option>
+								<option value="">товар - 37</option>
+								<option value="">товар - 38</option>
+								<option value="">товар - 39</option>
+								<option value="">товар - 40</option>
+							</select>
+						</td>
+						<td>
+							<div class="form-group">
+								<input type="number" class="form-control" step="0.01" aria-describedby="emailHelp">
+							</div>
+						</td>
+						<td>
+							<div class="form-group">
+								<input type="number" class="form-control" step="1" aria-describedby="emailHelp" value="500">
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			<div class="col-sm-4">
 			</div>
-		</div>
-	</section>
-
-	<div class="cut-scene">
-		<div class="container">
-			<img src="img/intro comics all.png" class="lose" alt="">
-			<img src="img/intro comics all win.png" class="win" alt="">
 		</div>
 	</div>
 
 
 
-
-
-	<script src="js/scripts.min.js"></script>
-
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
