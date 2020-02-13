@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mobile-select@1.1.2/mobile-select.css"> -->
+	<link rel="stylesheet" href="libs/mobileSelect/css/mobileSelect.css">
+
+
+	<title>Hello, world!</title>
+</head>
+<body>
+	
+
+	<div class="container">
+		<div class="row">
+
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Опт.</th>
+						<th scope="col">Товар</th>
+						<th scope="col">Вес</th>
+						<th scope="col">Цена</th>
+						<th scope="col">Сумма</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck1">
+								<label class="custom-control-label" for="customCheck1"></label>
+							</div>
+						</td>
+						<td>
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="Начните вбивать товар" aria-label="Начните вбивать товар" aria-describedby="button-addon2">
+								<div class="input-group-append">
+									<button class="btn btn-outline-secondary" type="button" id="button-addon2">Выбрать</button>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="form-group">
+								<input type="number" class="form-control" step="0.01" aria-describedby="emailHelp">
+							</div>
+						</td>
+						<td>
+							<div class="form-group">
+								<input type="number" class="form-control" step="1" aria-describedby="emailHelp" value="500">
+							</div>
+						</td>
+					</tr>
+					
+					
+					
+				</tbody>
+			</table>
+
+
+			<div class="col-sm-4">
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/mobile-select@1.1.2/mobile-select.min.js"></script> -->
+	<script src="libs/mobileSelect/js/mobileSelect.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			var mobileSelect6 = new MobileSelect({
+				trigger: '#button-addon2',
+				ensureBtnText: 'Выбрать',
+				cancelBtnText: 'Отменить',
+				title: 'keyMap',
+				wheels: [
+				{data:[
+					{
+						id:'1',
+						title:'Мандарины',
+						children:[
+						{id:'A1',title:'Мандарины Пакистан'},
+						{id:'A2',title:'Мандарины Абхазия'},
+						{id:'A3',title:'Мандарины Марокко'}
+						]
+					},
+					{
+						id:'1',
+						title:'Яблоки',
+						children:[
+						{id:'B1',title:'Черный принц - 1'},
+						{id:'B2',title:'Черный принц - 2'},
+						{id:'B3',title:'Черный принц - 3'},
+						{id:'B4',title:'Черный принц - 4'},
+						{id:'B5',title:'Черный принц - 5'},
+						{id:'B6',title:'Черный принц - 6'},
+						{id:'B7',title:'Черный принц - 7'},
+						{id:'B8',title:'Черный принц - 8'},
+						{id:'B9',title:'Черный принц - 9'},
+						{id:'B10',title:'Черный принц - 10'},
+						{id:'B10',title:'Черный принц - 10'},
+						{id:'B11',title:'Черный принц - 11'},
+						{id:'B12',title:'Черный принц - 12'},
+						{id:'B13',title:'Черный принц - 13'},
+						{id:'B2',title:'Лиголь'},
+						{id:'B3',title:'Польская Грушевка'}
+						]
+					},
+					]}
+					],
+					keyMap: {
+						id:'id',
+						value: 'title',
+						childs :'children'
+					},
+					callback:function(indexArr, data){
+						console.log(data);
+					}
+				});
+
+		});
+	</script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
