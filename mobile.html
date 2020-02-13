@@ -9,6 +9,24 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mobile-select@1.1.2/mobile-select.css"> -->
 	<link rel="stylesheet" href="libs/mobile-select/mobileSelect.css">
+	<style>
+		
+		.mobileSelect .content {
+			height: calc(60vh + 45px);
+		}
+		.mobileSelect .content .panel .wheels {
+			height: 60vh;
+		}
+		.mobileSelect .content .panel .wheel {
+			height: 60vh;
+		}
+		.mobileSelect .content .panel .shadowMask {
+			height: 60vh;
+			/*background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(rgba(255, 255, 255, 0)), to(#ffffff));*/
+			/*background: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0), #ffffff);*/
+			background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, #ffffff);
+		}
+	</style>
 
 
 	<title>Hello, world!</title>
@@ -83,7 +101,7 @@
 				trigger: '#button-addon2',
 				ensureBtnText: 'Выбрать',
 				cancelBtnText: 'Отменить',
-				title: 'keyMap',
+				title: 'Товар',
 				wheels: [
 				{data:[
 					{
