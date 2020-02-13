@@ -51,16 +51,17 @@
 					<tr>
 						<td scope="row">
 							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customCheck1">
-								<label class="custom-control-label" for="customCheck1"></label>
+								<input type="checkbox" class="custom-control-input" id="ch-1">
+								<label class="custom-control-label" for="ch-1"></label>
 							</div>
 						</td>
 						<td>
 							<div class="input-group mb-3">
-								<input type="text" class="form-control" placeholder="Начните вбивать товар" aria-label="Начните вбивать товар" aria-describedby="button-addon2">
-								<div class="input-group-append">
+								<button class="btn btn-outline-secondary" type="button" id="product">Выбрать товар</button>
+								<!-- <input type="text" id="product" class="form-control" placeholder="Начните вбивать товар" aria-label="Начните вбивать товар" aria-describedby="button-addon2"> -->
+								<!-- <div class="input-group-append">
 									<button class="btn btn-outline-secondary" type="button" id="button-addon2">Выбрать</button>
-								</div>
+								</div> -->
 							</div>
 						</td>
 						<td>
@@ -98,7 +99,8 @@
 		$(document).ready(function(){
 
 			var mobileSelect6 = new MobileSelect({
-				trigger: '#button-addon2',
+				// trigger: '#button-addon2',
+				trigger: '#product',
 				ensureBtnText: 'Выбрать',
 				cancelBtnText: 'Отменить',
 				title: 'Товар',
@@ -108,31 +110,31 @@
 						id:'1',
 						title:'Мандарины',
 						children:[
-						{id:'A1',title:'Мандарины Пакистан'},
-						{id:'A2',title:'Мандарины Абхазия'},
-						{id:'A3',title:'Мандарины Марокко'}
+						{id:'A1',title:'Мандарины Пакистан', price: 700, price_opt: 500},
+						{id:'A2',title:'Мандарины Абхазия', price: 700, price_opt: 500},
+						{id:'A3',title:'Мандарины Марокко', price: 700, price_opt: 500}
 						]
 					},
 					{
 						id:'1',
 						title:'Яблоки',
 						children:[
-						{id:'B1',title:'Черный принц - 1'},
-						{id:'B2',title:'Черный принц - 2'},
-						{id:'B3',title:'Черный принц - 3'},
-						{id:'B4',title:'Черный принц - 4'},
-						{id:'B5',title:'Черный принц - 5'},
-						{id:'B6',title:'Черный принц - 6'},
-						{id:'B7',title:'Черный принц - 7'},
-						{id:'B8',title:'Черный принц - 8'},
-						{id:'B9',title:'Черный принц - 9'},
-						{id:'B10',title:'Черный принц - 10'},
-						{id:'B10',title:'Черный принц - 10'},
-						{id:'B11',title:'Черный принц - 11'},
-						{id:'B12',title:'Черный принц - 12'},
-						{id:'B13',title:'Черный принц - 13'},
-						{id:'B2',title:'Лиголь'},
-						{id:'B3',title:'Польская Грушевка'}
+						{id:'B1',title:'Черный принц - 1', price: 700, price_opt: 500},
+						{id:'B2',title:'Черный принц - 2', price: 700, price_opt: 500},
+						{id:'B3',title:'Черный принц - 3', price: 700, price_opt: 500},
+						{id:'B4',title:'Черный принц - 4', price: 700, price_opt: 500},
+						{id:'B5',title:'Черный принц - 5', price: 700, price_opt: 500},
+						{id:'B6',title:'Черный принц - 6', price: 700, price_opt: 500},
+						{id:'B7',title:'Черный принц - 7', price: 700, price_opt: 500},
+						{id:'B8',title:'Черный принц - 8', price: 700, price_opt: 500},
+						{id:'B9',title:'Черный принц - 9', price: 700, price_opt: 500},
+						{id:'B10',title:'Черный принц - 10', price: 700, price_opt: 500},
+						{id:'B10',title:'Черный принц - 10', price: 700, price_opt: 500},
+						{id:'B11',title:'Черный принц - 11', price: 700, price_opt: 500},
+						{id:'B12',title:'Черный принц - 12', price: 700, price_opt: 500},
+						{id:'B13',title:'Черный принц - 13', price: 700, price_opt: 500},
+						{id:'B2',title:'Лиголь', price: 700, price_opt: 500},
+						{id:'B3',title:'Польская Грушевка', price: 700, price_opt: 500}
 						]
 					},
 					]}
@@ -143,11 +145,13 @@
 						childs :'children'
 					},
 					callback:function(indexArr, data){
-						console.log(data);
+						console.log(data.pop());
 					}
 				});
 
 		});
+
+		
 	</script>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
