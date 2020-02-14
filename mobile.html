@@ -81,8 +81,14 @@
 				</tbody>
 			</table>
 
+			<div class="col-md-12">
+				<button type="button" id="share" class="btn btn-primary">Поделиться</button>
+			</div>
+			<div class="result"></div>
+
 
 			<div class="col-sm-4">
+				<img id="share-img" src="https://qazkassa.kz/wp-content/uploads/2019/05/f6ae5b96ee41962aa3bb8736dccc8584.jpg" alt="">
 			</div>
 		</div>
 	</div>
@@ -97,6 +103,28 @@
 
 	<script>
 		$(document).ready(function(){
+
+			var image = $('#share-img').get(0);
+			const shareData = {
+				title: 'MDN',
+				text: 'Learn web development on MDN!',
+				url: 'https://developer.mozilla.org',
+				image: image,
+				mimeType: 'image/png'
+			}
+
+			const btn = document.querySelector('#share');
+			const resultPara = document.querySelector('.result');
+
+			btn.addEventListener('click', async () => {
+				try {
+					await navigator.share(shareData)
+					resultPara.textContent = 'Успешно передано';
+				} catch(err) {
+					resultPara.textContent = 'Браузер не поддрживает data-sharing';
+					console.log(err);
+				}
+			});
 
 			var mobileSelect6 = new MobileSelect({
 				// trigger: '#button-addon2',
