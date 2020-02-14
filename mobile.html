@@ -104,12 +104,9 @@
 	<script>
 		$(document).ready(function(){
 
-			var image = $('#share-img').get(0);
 			const shareData = {
-				title: 'MDN',
-				text: 'Learn web development on MDN!',
-				url: 'https://developer.mozilla.org',
-				image: image,
+				text: 'Тест шеринга картинки!',
+				image: document.querySelector('#share-img'),
 				mimeType: 'image/jpg'
 			}
 
